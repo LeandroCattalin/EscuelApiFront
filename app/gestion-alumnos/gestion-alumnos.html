@@ -1,0 +1,16 @@
+<body class="body-principal">
+    <h1 class="titulo-principal">Gestion de alumnos</h1>
+    <p>Desde aqui podras gestionar los alumnos</p>
+    <div class="container-principal">
+        <button class="boton-secundario" (click)="renderMenuAlta()">Agregar Alumno</button>
+        <button class="boton-secundario" (click)="renderMenuMod()">Modificar Alumno</button>
+        <button class="boton-secundario" (click)="renderMenuBaja()">Eliminar Alumno</button>
+    </div>
+    @if (option() === 1) {
+        <app-alta-alumnos></app-alta-alumnos>
+    } @else if (option() === 2) {
+        <app-mod-alumnos></app-mod-alumnos>
+    } @else if (option() === 3) {
+        <app-baja-alumnos></app-baja-alumnos>
+    }
+</body>

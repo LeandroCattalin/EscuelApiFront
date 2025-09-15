@@ -1,0 +1,27 @@
+<body class="conteiner-principal">
+    <h1>Modificar Alumno</h1>
+    <form class="formulario-busqueda">
+        <div class="form-group">
+            <label for="buscar">Buscar Alumno por ID:</label>
+            <input type="text" id="buscar" name="buscar" class="form-control" required>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="founded()">Buscar</button>
+    </form>
+    @if (found() == 1){
+        <form class="formulario-principal">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+    }
+</body>

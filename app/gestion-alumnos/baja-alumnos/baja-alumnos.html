@@ -1,0 +1,18 @@
+<body class="container-principal">
+    <h1 class="titulo-principal">Baja de Alumnos</h1>
+    <div class="container-secundario">
+        @if(baja() == false){
+            <form class="formulario">
+                <div class="form-group">
+                    <label for="dni">DNI del Alumno:</label>
+                    <input type="text" id="dni" formControlName="dni" class="form-control" placeholder="Ingrese el DNI del alumno a dar de baja">
+                </div>
+                <button (click)="bajaAlumno()" type="submit" class="btn btn-danger">Dar de Baja</button>
+            </form>
+        } @else {
+            <div class="alert alert-success" role="alert">
+                El alumno ha sido dado de baja exitosamente.
+            </div>
+        }
+    </div>
+</body>

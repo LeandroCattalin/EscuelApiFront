@@ -1,0 +1,20 @@
+<body class="body-principal">
+  <div class="container-principal">
+    <h1 class="titulo-principal" (click)="unrenderAll()">Gestion de Escuela</h1>
+    <button class="boton-principal" (click)="renderAlumnos()">Gestionar Alumnos</button>
+    <button class="boton-principal" (click)="renderProfesores()">Gestionar Profesores</button>
+    <button class="boton-principal" (click)="renderEscuelas()">Gestionar Escuelas</button>
+  </div>
+  <router-outlet></router-outlet>
+  <div class="container-app">
+    @if (option() === 0) {
+        <div>Seleccione una opción</div>
+    } @else if (option() === 1) {
+        <app-gestion-alumnos></app-gestion-alumnos>
+    } @else if (option() === 2) {
+        <div>Profesores</div>
+    } @else if (option() === 3) {
+        <div>Escuelas</div>
+    }
+  </div>
+</body>
